@@ -1,6 +1,6 @@
 import { PageHeader } from "@/components/page-header";
-import { jobApplicationStatuses } from "@/features/job-applications/types";
-import { mockJobApplications } from "@/features/job-applications/data/mock-job-applications";
+import { jobApplicationStatuses } from "@/app/board/components/types";
+import { mockJobApplications } from "@/lib/data/mock-job-applications";
 
 export default function Home() {
   const stats = jobApplicationStatuses.map((status) => ({

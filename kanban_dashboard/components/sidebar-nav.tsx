@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navItems } from "@/lib/navigation";
 
-function isActive(pathname: string, href: (typeof navItems)[number]["href"]) {
-  if (href === "/") {
+function isActive(pathname: string | null, href: (typeof navItems)[number]["href"]) {
+  if (!pathname || href === "/") {
     return pathname === "/";
   }
   return pathname === href || pathname.startsWith(`${href}/`);

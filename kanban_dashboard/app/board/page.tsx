@@ -1,6 +1,6 @@
 import { PageHeader } from "@/components/page-header";
-import { JobApplicationBoard } from "@/features/job-applications/components/job-application-board";
-import { mockJobApplications } from "@/features/job-applications/data/mock-job-applications";
+import { JobApplicationBoard } from "@/lib/job-application-board";
+import { mockJobApplications } from "@/lib/data/mock-job-applications";
 
 export default function BoardPage() {
   return (

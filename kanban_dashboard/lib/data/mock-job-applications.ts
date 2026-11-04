@@ -1,4 +1,4 @@
-import type { JobApplication } from "@/features/job-applications/types";
+import { JobApplicationStatus, type JobApplication } from "@/app/board/components/types";
 
 export const mockJobApplications: JobApplication[] = [
   {
@@ -7,7 +7,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 185000,
     dateApplied: "2026-09-12",
     notes: "Strong design system culture. Referral from former teammate.",
-    status: "Interviewing",
+    status: JobApplicationStatus.INTERVIEWING,
   },
   {
     companyName: "Notion",
@@ -15,7 +15,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 175000,
     dateApplied: "2026-09-18",
     notes: "Take-home focused on collaborative editing. Waiting on loop 2.",
-    status: "Interviewing",
+    status: JobApplicationStatus.INTERVIEWING,
   },
   {
     companyName: "Figma",
@@ -23,7 +23,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 190000,
     dateApplied: "2026-08-29",
     notes: "Onsite scheduled with the editor platform team.",
-    status: "Interviewing",
+    status: JobApplicationStatus.INTERVIEWING,
   },
   {
     companyName: "Linear",
@@ -31,7 +31,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 170000,
     dateApplied: "2026-10-02",
     notes: "Loved the product demo. Recruiter screen went well.",
-    status: "Applied",
+    status: JobApplicationStatus.APPLIED,
   },
   {
     companyName: "Vercel",
@@ -39,7 +39,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 180000,
     dateApplied: "2026-10-08",
     notes: "Submitted application plus GitHub portfolio.",
-    status: "Applied",
+    status: JobApplicationStatus.APPLIED,
   },
   {
     companyName: "Shopify",
@@ -47,7 +47,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 200000,
     dateApplied: "2026-10-14",
     notes: "Remote-friendly. Need to tailor examples around checkout UX.",
-    status: "Applied",
+    status: JobApplicationStatus.APPLIED  ,
   },
   {
     companyName: "Airbnb",
@@ -55,7 +55,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 195000,
     dateApplied: "2026-07-21",
     notes: "Verbal offer pending written package and start date.",
-    status: "Offer",
+    status: JobApplicationStatus.OFFER,
   },
   {
     companyName: "Spotify",
@@ -63,7 +63,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 165000,
     dateApplied: "2026-08-04",
     notes: "Offer includes stock refreshers after year one.",
-    status: "Offer",
+    status: JobApplicationStatus.OFFER,
   },
   {
     companyName: "Datadog",
@@ -71,7 +71,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 178000,
     dateApplied: "2026-06-30",
     notes: "Rejected after system design. Ask for feedback next cycle.",
-    status: "Rejected",
+    status: JobApplicationStatus.REJECTED,
   },
   {
     companyName: "Twilio",
@@ -79,7 +79,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 160000,
     dateApplied: "2026-07-11",
     notes: "Role paused after hiring freeze. Recruiter will reopen in Q1.",
-    status: "Rejected",
+    status: JobApplicationStatus.REJECTED,
   },
   {
     companyName: "Dropbox",
@@ -87,7 +87,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 172000,
     dateApplied: "2026-08-15",
     notes: "Did not move past hiring manager screen.",
-    status: "Rejected",
+    status: JobApplicationStatus.REJECTED,
   },
   {
     companyName: "Anthropic",
@@ -95,7 +95,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 210000,
     dateApplied: "2026-10-20",
     notes: "High bar. Draft a stronger AI-product case study first.",
-    status: "Wishlist",
+    status: JobApplicationStatus.WISHLIST,
   },
   {
     companyName: "OpenAI",
@@ -103,7 +103,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 220000,
     dateApplied: "2026-10-22",
     notes: "Need a referral before applying. Follow up with alumni.",
-    status: "Wishlist",
+    status: JobApplicationStatus.WISHLIST,
   },
   {
     companyName: "Ramp",
@@ -111,7 +111,7 @@ export const mockJobApplications: JobApplication[] = [
     salary: 175000,
     dateApplied: "2026-10-25",
     notes: "Fast-growing fintech. Watch for a new web platform posting.",
-    status: "Wishlist",
+    status: JobApplicationStatus.WISHLIST,
   },
   {
     companyName: "Arc",
@@ -119,6 +119,6 @@ export const mockJobApplications: JobApplication[] = [
     salary: 168000,
     dateApplied: "2026-10-28",
     notes: "Small team. Interested in the sidebar and split-view work.",
-    status: "Wishlist",
+    status: JobApplicationStatus.WISHLIST,
   },
 ];

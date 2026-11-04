@@ -2,34 +2,15 @@
 
 import { useState } from "react";
 import {
+  BoardApplication,
+  JobApplication,
   jobApplicationStatuses,
-  type JobApplication,
   type JobApplicationStatus,
-} from "@/features/job-applications/types";
+} from "@/app/board/components/types";
+import { formatDate, formatSalary } from "@/lib/utils";
 
-interface BoardApplication {
-  id: number;
-  application: JobApplication;
-}
-
-interface JobApplicationBoardProps {
+export type JobApplicationBoardProps = {
   applications: JobApplication[];
-}
-
-function formatSalary(salary: number) {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  }).format(salary);
-}
-
-function formatDate(dateApplied: string) {
-  return new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  }).format(new Date(`${dateApplied}T00:00:00`));
 }
 
 export function JobApplicationBoard({
